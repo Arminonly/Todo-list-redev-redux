@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import { Wrapper } from './components/styled-components/styles';
+import LoginForm from './components/auth/Login/LoginForm';
+import RegistryForm from './components/auth/Registry/RegistryForm';
+import Main from './Pages/Main';
+import Protected from './components/Protected/Protected';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Routes>
+        <Route path="/" element={<LoginForm />} />
+        <Route path="/registry" element={<RegistryForm />} />
+        <Route
+          path="/main"
+          element={
+            <Protected>
+              <Main />
+            </Protected>
+          }
+        />
+      </Routes>
+    </Wrapper>
   );
 }
 
