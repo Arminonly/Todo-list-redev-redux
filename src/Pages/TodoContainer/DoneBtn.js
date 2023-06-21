@@ -8,6 +8,7 @@ const DoneBtn = ({ item }) => {
 
   const complitedTodo = (id) => {
     const complited = [...todos];
+    // eslint-disable-next-line
     complited.map((todo) => {
       if (todo.id === id) {
         todo.complited = !todo.complited;
