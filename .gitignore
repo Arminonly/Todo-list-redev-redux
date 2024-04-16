@@ -22,10 +22,20 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-
 # 'https://todo-redev.herokuapp.com/api/users/register'
 #   "username": "mayday23",
 #   "email": "mayday@gmail.com",
 #   "password": "Mayday_*23",
 #   "gender": "female",
 #   "age": 25
+
+
+#  'https://todo-redev.herokuapp.com/api/users/register'
+# "username": "todoRedux2023",
+#   "email": "todoRedux202@example.com",
+#   "password": "1Sq_22qw",
+#   "gender": "female",
+#   "age": 25
+
+
+# https://todo-redev.herokuapp.com/api/auth/login

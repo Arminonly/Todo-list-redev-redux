@@ -7,9 +7,7 @@ const TodoInput = ({ item }) => {
   const todos = useSelector((state) => state.todo.todos);
 
   const editTodo = (text, id) => {
-    const edited = [
-      ...todos.map((todo) => (todo.id === id ? { ...todo, value: text } : todo))
-    ];
+    const edited = [...todos.map((todo) => (todo.id === id ? { ...todo, value: text } : todo))];
     dispatch(setTodos(edited));
   };
   return (
